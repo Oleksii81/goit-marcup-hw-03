@@ -1,3 +1,8 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
 :root {
     --brand-color: #2E2F42;
     --text-color: #434455;
@@ -13,7 +18,19 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #FFFFFF;
 }
+.header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #E7E9FC;
+}
+.main-nav {
+    display: flex;
+}
 .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 156px;
+    margin-right: 76px;
     font-family: var(--font-alternative);
         font-weight: 800;
         font-size: 18px;
@@ -22,16 +39,31 @@ body {
         text-transform: uppercase;
         color: var(--logo-web-color);
 }
+.header-nav {
+    display: flex;
+}
+.header-nav .item:not(:last-child) {
+    margin-right: 40px;
+}
 .link {
     text-decoration: none;
+}
+.main-nav {
+    margin-right: auto;
 }
 .logo-studio {
     color: var(--brand-color);
 }
 .list {
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
 .nav-link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -44,8 +76,17 @@ body {
 .address {
     font-style: normal;
 }
+.address-list {
+    display: flex;
+}
+.address-list .adrs-item + .adrs-item {
+    margin-left: 40px;
+}
+.adrs-item:last-child {
+    margin-right: 156px;
+}
 .address-link {
-        color: var(--text-color);
+    color: var(--text-color);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -61,9 +102,19 @@ body {
     color: var(--nav-color);
 }
 .hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
     background-color: var(--brand-color);
+    text-align: center;
+}
+.head-box {
+    display: block;
+    width: 496px;
+    margin: 0 auto;
 }
 .hero-head {
+    margin-top: 0;
+    margin-bottom: 48px;
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
@@ -88,7 +139,27 @@ body {
 .button:hover, .button:focus {
     background-color: var(--nav-color);
 } 
+.strengths {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.conteiner {
+    
+}
+.strengths-list {
+    display: flex;
+}
 .strengths-head {
+    margin-top: 0;
+    margin-bottom: 8px;
     font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
@@ -96,11 +167,15 @@ body {
         color: var(--brand-color);
 }
 .strengths-text {
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
 }
 .doing-head {
+    margin-top: 0;
+    margin-bottom: 72px;
     font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
@@ -113,6 +188,8 @@ body {
     background-color: var(--background-color-gray);
 }
 .team-head {
+    margin-top: 0;
+    margin-bottom: 72px;
     font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
