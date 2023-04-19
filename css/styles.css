@@ -171,7 +171,7 @@ img {
     margin: auto;
 }
 .strengths-item {
-    width: 264px;
+    width: calc((100% - 72px) / 4);
 }
 .strengths-head {
     margin-top: 0;
@@ -237,6 +237,7 @@ img {
 }
 .teammate {
     margin-bottom: 8px;
+    margin-top: 0;
     font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
@@ -310,7 +311,7 @@ img {
 }
 .filter-button:hover,
 .filter-button:focus {
-    border: 1px solid transparent
+    border: 1px solid transparent;
     background-color: var(--nav-color);
     color: #FFFFFF;
 }
